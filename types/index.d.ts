@@ -26,7 +26,7 @@ type Companion = Models.DocumentList<Models.Document> & {
   bookmarked: boolean;
 };
 
-interface CreateCompanion {
+interface CreateHumain {
   name: string;
   subject: string;
   topic: string;
@@ -35,7 +35,7 @@ interface CreateCompanion {
   duration: number;
 }
 
-interface GetAllCompanions {
+interface GetAllHumains {
   limit?: number;
   page?: number;
   subject?: string | string[];
@@ -71,7 +71,7 @@ interface SavedMessage {
   content: string;
 }
 
-interface CompanionComponentProps {
+interface HumainComponentProps {
   companionId: string;
   subject: string;
   topic: string;
