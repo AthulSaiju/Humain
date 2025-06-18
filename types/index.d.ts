@@ -17,7 +17,7 @@ enum Subject {
   business = "business",
 }
 
-type Companion = Models.DocumentList<Models.Document> & {
+type Humain = Models.DocumentList<Models.Document> & {
   $id: string;
   name: string;
   subject: Subject;
@@ -72,7 +72,7 @@ interface SavedMessage {
 }
 
 interface HumainComponentProps {
-  companionId: string;
+  humainId: string;
   subject: string;
   topic: string;
   name: string;

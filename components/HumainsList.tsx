@@ -14,7 +14,7 @@ import Image from "next/image";
 
 interface HumainsListProps {
     title: string;
-    humains?: Companion[];
+    humains?: Humain[];
     classNames?: string;
 }
 
