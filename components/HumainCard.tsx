@@ -33,7 +33,7 @@ const HumainCard = ({
 //     }
 //   };
   return (
-    <article className="companion-card" style={{ backgroundColor: color }}>
+    <article className="companion-card glass3" style={{ backgroundColor: color }}>
       <div className="flex justify-between items-center">
         <div className="subject-badge">{subject}</div>
         <button className="companion-bookmark" >

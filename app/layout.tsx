@@ -22,7 +22,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${bricolage.variable} antialiased`}>
-         <ClerkProvider >
+         <ClerkProvider  appearance={{
+    layout: {
+      unsafe_disableDevelopmentModeWarnings: true,
+    },
+  }}
+  /* …your other props */
+>
         <Navbar/>
         {children}
         </ClerkProvider>

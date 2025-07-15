@@ -79,7 +79,7 @@ const HumainForm = () => {
                     name="name"
                     render={({ field }) => (
                         <FormItem>
-                            <FormLabel>HUmain name</FormLabel>
+                            <FormLabel>Humain name</FormLabel>
                             <FormControl>
                                 <Input
                                     placeholder="Enter the Huamin name"

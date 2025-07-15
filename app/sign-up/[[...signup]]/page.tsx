@@ -1,5 +1,5 @@
-import { SignIn } from '@clerk/nextjs'
 
+import { SignUp } from '@clerk/nextjs'
 
 
 export default function Page() {
@@ -32,8 +32,8 @@ export default function Page() {
           style={{ top: "65%" }}
         />
       </div>
-    <SignIn />
     
+    <SignUp />
     </section>
 
     </section>
