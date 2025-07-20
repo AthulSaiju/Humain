@@ -42,7 +42,7 @@ export default function Page() {
       <section className="relative w-full h-screen overflow-hidden bg-[radial-gradient(circle,rgba(255,255,255,1)_0%,rgba(204,204,204,1)_65%,rgba(242,242,242,1)_100%)]">
         <section className="relative w-full h-full flex flex-col-reverse justify-between bg-[#030003]">
           {/* Section 1: Text + CTA */}
-          <div className="relative w-full lg:h-[45%] h-[65%] lg:px-[3%] px-[9%] pb-4 text-white flex flex-col pt-10 items-start custom-font">
+          <div className="relative w-full lg:h-[45%] h-[65%] lg:px-[3%] px-[9%] pb-4 text-white flex flex-col pt-10 items-start custom-font lg:mb-2 mb-8">
             <span className="absolute top-2 right-3 lg:text-3xl opacity-30">
               humain.ai
             </span>
@@ -53,7 +53,7 @@ export default function Page() {
                   AI Agents for <br />
                   Smarter and Faster <br /> Learning
                 </h1>
-                <p className="text-lg opacity-60 mt-6 tracking-[0.05em]">
+                <p className="lg:text-lg text-sm opacity-60 mt-6 tracking-[0.05em]">
                   Engage in real‑time, interactive sessions Powered by GPT‑4o,
                   personalized to your individual pace and learning style.
                 </p>
@@ -64,11 +64,11 @@ export default function Page() {
               </div>
             </div>
 
-            <div className="w-full lg:mt-12 border-t border-t-[#c2c2c2] pt-5 opacity-50">
+            <div className="w-full lg:mt-12 border-t border-t-[#c2c2c2] pt-5 opacity-50 text-sm lg:text-lg">
               2025
             </div>
 
-            <div className="absolute bottom-0 right-0">
+            <div className="absolute bottom-1 right-0">
               <LiveClock />
             </div>
           </div>

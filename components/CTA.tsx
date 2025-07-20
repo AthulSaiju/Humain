@@ -8,23 +8,16 @@ const CTA = () => {
     <section className="cta-section w-fit ">
       <Link href="/humains">
         <button className="group flex items-center rounded-full cursor-pointer gap-1 px-1">
-  {/* 1st child: flips to white bg + black text on hover */}
-  <div
-    className="
-      lg:py-7 lg:px-16 py-6 px-12 rounded-full text-xl 
-      border-2 border-[#7f7f7f] text-white
-      transition-colors duration-300 ease-in-out
-      
+          {/* 1st child: flips to white bg + black text on hover */}
+          <div
+            className="lg:py-7 lg:px-16 py-6 px-12 rounded-full lg:text-2xl text-lg border-2 border-[#7f7f7f] text-white transition-colors duration-300 ease-in-out"
+          >
+            <p>Get Started</p>
+          </div>
 
-      
-    "
-  >
-    <p>Get Started</p>
-  </div>
-
-  {/* 2nd child: rotates 90° on hover */}
-  <div
-    className="
+          {/* 2nd child: rotates 90° on hover */}
+          <div
+            className="
       bg-white lg:p-4.5 p-3 rounded-full 
       flex items-center justify-center
 
@@ -34,16 +27,15 @@ const CTA = () => {
 
       
     "
-  >
-    <Image
-      src="/icons/arrowd2.svg"
-      alt="arrow"
-      width={52.5}
-      height={53.5}
-    />
-  </div>
-</button>
-
+          >
+            <Image
+              src="/icons/arrowd2.svg"
+              alt="arrow"
+              width={52.5}
+              height={53.5}
+            />
+          </div>
+        </button>
       </Link>
 
       {/* <Link href="/humains/new">
