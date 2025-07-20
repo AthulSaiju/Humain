@@ -74,7 +74,7 @@ const HumainComponent = ({
       vapi.off("speech-start", onSpeechStart);
       vapi.off("speech-end", onSpeechEnd);
     };
-  }, []);
+  }, [humainId]);
 
   const toggleMicrophone = () => {
     const isMuted = vapi.isMuted();

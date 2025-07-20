@@ -13,7 +13,7 @@ const NewHumain = async () => {
 
   return (
 
-        <section className=' w-full min-h-screen bg-[radial-gradient(circle,rgba(255,255,255,1)_0%,rgba(204,204,204,1)_65%,rgba(242,242,242,1)_100%)] max-sm:px-4'>
+        <section className=' w-full min-h-screen bg-white max-sm:px-4'>
 
            <div className="absolute inset-0 pointer-events-none z-40">
     {/* vertical lines */}

@@ -22,10 +22,10 @@ const HumainSession = async ({ params }: HumainSessionPageProps) => {
 
 
   return (
-    <section className=' w-full min-h-screen bg-[radial-gradient(circle,rgba(255,255,255,1)_0%,rgba(204,204,204,1)_65%,rgba(242,242,242,1)_100%)] '>
-    <main className='' >
+    <section className=' w-full min-h-screen bg-white'>
+    <main>
 
-        <section className='custom-bg p-8 rounded-4xl gap-2'>
+        <section className='custom-bg p-8 rounded-4xl gap-2 max-sm:-mt-4'>
             <article className="flex rounded-2xl justify-between p-6 flex-wrap  bg-[#c2bebd] mb-4">
 
                 <div className="flex items-center gap-2">

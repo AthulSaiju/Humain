@@ -1,3 +1,4 @@
+
 import { SignIn } from '@clerk/nextjs'
 
 
@@ -5,7 +6,7 @@ import { SignIn } from '@clerk/nextjs'
 export default function Page() {
   return(
 
-<section className=' w-full min-h-screen flex items-center justify-center bg-[radial-gradient(circle,rgba(255,255,255,1)_0%,rgba(204,204,204,1)_65%,rgba(242,242,242,1)_100%)] '>
+<section className=' w-full min-h-screen flex items-center justify-center bg-white '>
    <section className='w-full  flex items-center justify-center'>
     <div className="fixed inset-0 pointer-events-none z-0">
         {/* vertical lines */}

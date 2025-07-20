@@ -1,12 +1,14 @@
+// middleware.ts
 import { clerkMiddleware } from '@clerk/nextjs/server';
 
 export default clerkMiddleware();
 
 export const config = {
   matcher: [
-    // Skip Next.js internals and all static files, unless found in search params
-    '/((?!_next|[^?]*\\.(?:html?|css|js(?!on)|jpe?g|webp|png|gif|svg|ttf|woff2?|ico|csv|docx?|xlsx?|zip|webmanifest)).*)',
-    // Always run for API routes
-    '/(api|trpc)(.*)',
+    // Protect all `/humains/*`
+    '/humains/:path*',
+    // Protect `/my-journey` (and any deeper paths, if you ever add them)
+    '/my-journey',        // covers exactly `/my-journey`
+    '/my-journey/:path*', // covers `/my-journey/...`
   ],
 };

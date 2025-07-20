@@ -1,9 +1,7 @@
 "use client";
-// import { removeBookmark } from "@/lib/actions/companion.actions";
-// import { addBookmark } from "@/lib/actions/companion.actions";
 import Image from "next/image";
-import Link from "next/link";
-// import { usePathname } from "next/navigation";
+import { useRouter } from "next/navigation";
+import { useState, useTransition } from "react";
 
 interface HumainCardProps {
   id: string;
@@ -15,7 +13,7 @@ interface HumainCardProps {
   bookmarked: boolean;
 }
 
-const HumainCard = ({
+export default function HumainCard({
   id,
   name,
   topic,
@@ -23,21 +21,27 @@ const HumainCard = ({
   duration,
   color,
   bookmarked,
-}: HumainCardProps) => {
-//   const pathname = usePathname();
-//   const handleBookmark = async () => {
-//     if (bookmarked) {
-//       await removeBookmark(id, pathname);
-//     } else {
-//       await addBookmark(id, pathname);
-//     }
-//   };
+}: HumainCardProps) {
+  const router = useRouter();
+  const [loading, setLoading] = useState(false);
+  const [isPending, startTransition] = useTransition();
+
+   const handleLaunch = () => {
+    setLoading(true);
+
+    startTransition(() => {
+      router.push(`/humains/${id}`);
+    });
+  };
+
   return (
-    <article className="companion-card glass3" style={{ backgroundColor: color }}>
+    <article
+      className="companion-card bg-[#ffffff] z-10"
+      style={{ backgroundColor: color }}
+    >
       <div className="flex justify-between items-center">
         <div className="subject-badge">{subject}</div>
-        <button className="companion-bookmark" >
-        {/* onClick={handleBookmark}> */}
+        <button className="companion-bookmark">
           <Image
             src={
               bookmarked ? "/icons/bookmark-filled.svg" : "/icons/bookmark.svg"
@@ -61,13 +65,36 @@ const HumainCard = ({
         <p className="text-sm">{duration} minutes</p>
       </div>
 
-      <Link href={`/humains/${id}`} className="w-full">
-        <button className="btn-primary w-full justify-center">
-          Launch Lesson
-        </button>
-      </Link>
+        <button
+      onClick={handleLaunch}
+      disabled={loading || isPending}
+      className="btn-primary w-full justify-center flex items-center gap-2"
+    >
+      {(loading || isPending) ? (
+        <svg
+          className="h-5 w-5 animate-spin text-white"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+        >
+          <circle
+            className="opacity-25"
+            cx="12"
+            cy="12"
+            r="10"
+            stroke="currentColor"
+            strokeWidth="4"
+          />
+          <path
+            className="opacity-75"
+            fill="currentColor"
+            d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
+          />
+        </svg>
+      ) : (
+        "Launch Session"
+      )}
+    </button>
     </article>
   );
-};
-
-export default HumainCard;
+}

@@ -27,7 +27,7 @@ const Profile = async () => {
   const totalSessions = await getUserSessionCount(user.id);
 
   return (
-    <section className="relative w-full min-h-screen lg:pt-[6vh] pb-4 bg-[radial-gradient(circle,rgba(255,255,255,1)_0%,rgba(204,204,204,1)_65%,rgba(242,242,242,1)_100%)]">
+    <section className="relative w-full min-h-screen lg:pt-[6vh] pb-4 bg-white">
       <div className="fixed inset-0 pointer-events-none z-0">
         {/* vertical lines */}
         <div
@@ -40,17 +40,17 @@ const Profile = async () => {
         />
         <div
           className="absolute w-px h-full bg-black opacity-20"
-          style={{ left: "82%" }}
+          style={{ right: "15%" }}
         />
 
         {/* horizontal lines */}
         <div
           className="absolute h-px w-full bg-black opacity-20"
-          style={{ top: "30%" }}
+          style={{ top: "17%" }}
         />
         <div
           className="absolute h-px w-full bg-black opacity-20"
-          style={{ top: "65%" }}
+          style={{ top: "80%" }}
         />
       </div>
 

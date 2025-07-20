@@ -18,7 +18,7 @@ export const createHumain = async (formData: CreateHumain) => {
     return data[0];
 }
 
-export const getAllHumains = async ({ limit = 10, page = 1, subject, topic }: GetAllHumains) => {
+export const getAllHumains = async ({ limit = 6, page = 1, subject, topic }: GetAllHumains) => {
     const supabase = createSupabaseClient();
 
     let query = supabase.from('humains').select();

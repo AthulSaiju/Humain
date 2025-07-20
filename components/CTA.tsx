@@ -31,7 +31,6 @@ const CTA = () => {
       transform transition-all duration-300 ease-in-out
       group-hover:rotate-45
             group-hover:translate-x-1
-            group-hover:bg-orange-500 
 
       
     "
