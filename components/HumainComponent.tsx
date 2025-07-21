@@ -191,7 +191,7 @@ const HumainComponent = ({
                 if (message.role === "assistant") {
                   return (
 
-                    <p key={index} className="text-white max-sm:text-sm text-lg bg-[#444444] max-w-fit p-2 text-center px-4 rounded-4xl">
+                    <p key={index} className="text-white lg:text-lg text-sm bg-[#444444] max-w-fit p-2 text-center px-4 rounded-4xl">
                      
                       {message.content}
                     </p>
@@ -201,7 +201,7 @@ const HumainComponent = ({
                   );
                 } else {
                   return (
-                    <p key={index} className="text-black max-sm:text-sm bg-[#87c4cc] max-w-fit  rounded-4xl self-end p-2 text-lg text-center px-4">
+                    <p key={index} className="text-black lg:text-lg text-sm bg-[#87c4cc] max-w-fit  rounded-4xl self-end p-2 text-center px-4">
                        {message.content}
                     </p>
                   );

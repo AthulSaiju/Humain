@@ -32,11 +32,11 @@ const NewHumain = async () => {
 
     {/* horizontal lines */}
     <div
-      className="absolute h-px w-full bg-black opacity-20"
+      className="absolute h-px w-full bg-black opacity-20 max-sm:hidden"
       style={{ top: "8%" }}
     />
     <div
-      className="absolute h-px w-full bg-black opacity-20 "
+      className="absolute h-px w-full bg-black opacity-20 max-sm:hidden"
       style={{ bottom: "11%" }}
     />
 

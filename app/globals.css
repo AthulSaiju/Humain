@@ -208,7 +208,7 @@ body {
     @apply !border-black !bg-white focus-visible:!ring-0 focus-visible:!border-black !w-full;
   }
   .input2 {
-    @apply !border-black focus-visible:!ring-0 focus-visible:!border-black !w-full;
+    @apply !border-black focus-visible:!ring-0 focus-visible:!border-black !w-full ;
   }
   .rounded-border {
     @apply rounded-4xl border border-black;
@@ -229,7 +229,7 @@ body {
     @apply border border-black rounded-4xl px-4 py-2.5 text-sm font-semibold flex items-center gap-2 cursor-pointer;
   }
   .companion-list {
-    @apply rounded-4xl  lg:px-7 px-2 pt-7 pb-5 max-lg:w-full bg-white opacity-60;
+    @apply lg:rounded-4xl rounded-2xl  lg:px-7 px-2 pt-7 pb-5 max-lg:w-full bg-white opacity-60;
   }
   .companion-limit {
     @apply items-center justify-center flex flex-col gap-4 w-full min-2xl:w-1/2 pt-20 text-center;

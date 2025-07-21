@@ -33,11 +33,11 @@ const HumainsLibrary = async ({ searchParams }: SearchParams) => {
 
         {/* horizontal lines */}
         <div
-          className="absolute h-px w-full bg-black opacity-20 top-[27%] lg:top-[23%]"
+          className="absolute h-px w-full bg-black opacity-20 top-[27%] lg:top-[23%] max-sm:hidden"
           // style={{ top: "23%" }}
         />
         <div
-          className="absolute h-px w-full bg-black opacity-20"
+          className="absolute h-px w-full bg-black opacity-20 max-sm:hidden"
           style={{ top: "90%" }}
         />
       </div>

@@ -39,17 +39,19 @@ const Navbar = () => {
             </button>
           </SignUpButton> */}
 
-          <Link href="/sign-in" prefetch={true}>
-            <button className=" flex items-center py-4 px-8 rounded-full lg:text-lg text-sm text-black bg-white cursor-pointer">
-              <p>Login</p>
-            </button>
-          </Link>
-
           <Link href="/sign-up" prefetch={true}>
-            <button className=" flex items-center py-4 px-8 rounded-full lg:text-lg text-sm text-white bg-black cursor-pointer">
+            <button className=" flex items-center py-4 px-8 rounded-full lg:text-lg text-sm text-black bg-white cursor-pointer max-sm:hidden">
               <p>Sign Up </p>
             </button>
           </Link>
+
+          <Link href="/sign-in" prefetch={true}>
+            <button className=" flex items-center py-4 px-8 rounded-full lg:text-lg text-sm text-white bg-black cursor-pointer">
+              <p>Sign In</p>
+            </button>
+          </Link>
+
+          
 
 
           </div>

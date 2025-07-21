@@ -4,86 +4,63 @@ import React from 'react';
 
 export default function Uitest() {
   return (
-<section className=' w-full min-h-screen bg-white  flex justify-center items-center '>
-
-     <div className="fixed inset-0 pointer-events-none z-0">
-        {/* vertical lines */}
-        <div
-          className="absolute w-px h-full bg-black opacity-20"
-          style={{ left: "15%" }}
-        />
-        <div
-          className="absolute w-px h-full bg-black opacity-20"
-          style={{ left: "50%" }}
-        />
-        <div
-          className="absolute w-px h-full bg-black opacity-20"
-          style={{ right: "15%" }}
-        />
-
-        {/* horizontal lines */}
-        <div
-          className="absolute h-px w-full bg-black opacity-20"
-          style={{ top: "17%" }}
-        />
-        <div
-          className="absolute h-px w-full bg-black opacity-20"
-          style={{ top: "80%" }}
-        />
-      </div>
 
 
-    <section className="lg:w-[73%] w-full lg:p-8  space-y-6 animate-pulse lg:mt-4 mt-[15vh]">
+    <section className=' w-full min-h-screen bg-white max-sm:px-4 flex justify-center items-center '>
+    <section className="lg:w-[73%] w-[90%] lg:p-8  space-y-6 animate-pulse mt-[10vh] ">
       {/* Header Card */}
-      
+      <article className="flex rounded-2xl justify-between max-sm:h-[200px] p-6 flex-wrap bg-gray-300 mb-4">
+        <div className="flex items-center gap-4">
+          {/* icon */}
+          <div className="h-9 w-9 bg-gray-300 rounded max-md:hidden" />
+          <div className="space-y-2">
+            {/* name */}
+            <div className="h-6 w-40 bg-gray-300 rounded" />
+            {/* subject badge */}
+            <div className="h-5 w-20 bg-gray-300 rounded" />
+          </div>
+        </div>
+        <div className="flex items-center gap-2">
+          {/* clock */}
+          <div className="h-4 w-4 bg-gray-300 rounded" />
+          <div className="h-4 w-8 bg-gray-300 rounded" />
+        </div>
+      </article>
 
-      <section className="w-full relative z-10 max-sm:gap-2 mx-auto lg:space-y-6 space-y-2 px-4">
-        {/* Header section */}
-        <section className="flex justify-between gap-4 max-sm:flex-col lg:p-2 lg:px-4 py-6 items-center bg-gray-200 rounded-xl">
-          <div className="flex items-center gap-4">
-            {/* Avatar */}
-            <div className="h-28 w-28 bg-gray-300 rounded-full" />
+      {/* Main HumainComponent area */}
+      <div className="flex gap-6 max-sm:flex-col">
+        {/* Left: companion avatar + lottie */}
+        <div className="flex-1 bg-gray-200 rounded-2xl lg:h-[550px] relative overflow-hidden max-sm:hidden">
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="h-72 w-48 bg-gray-300 rounded-lg" />
+          </div>
+          <div className="absolute bottom-0 w-full h-16 bg-gray-300 opacity-60" />
+        </div>
+
+        {/* Right: transcript */}
+        <div className="flex-1 space-y-4">
+          <div className="lg:h-[550px] h-[400px] bg-gray-200 rounded-2xl p-4 overflow-hidden">
             <div className="space-y-2">
-              <div className="h-6 w-40 bg-gray-300 rounded" />
-              <div className="h-4 w-56 bg-gray-300 rounded" />
+              {[...Array(6)].map((_, i) => (
+                <div key={i} className={`h-4 w-${Math.floor(Math.random()*30+50)}% bg-gray-300 rounded`} />
+              ))}
             </div>
           </div>
 
-          {/* Stats cards */}
-          <div className="flex gap-4 items-center">
-            <div className="bg-gray-100 rounded-2xl p-4 flex flex-col gap-2">
-              <div className="h-6 w-24 bg-gray-300 rounded" />
-              <div className="h-4 w-32 bg-gray-300 rounded" />
-            </div>
-            <div className="bg-gray-300 rounded-2xl p-4 flex flex-col gap-2">
-              <div className="h-6 w-24 bg-gray-100 rounded" />
-              <div className="h-4 w-32 bg-gray-100 rounded" />
-            </div>
+          {/* Controls row */}
+          
+        </div>
+      </div>
+      <div className="flex gap-4">
+            {/* mic button */}
+            <div className="h-13 w-13 bg-gray-300 rounded-full" />
+            {/* action button */}
+            <div className="flex-1 h-12 bg-gray-300 rounded-3xl" />
           </div>
-        </section>
-
-        {/* Accordion section */}
-        <section className="bg-gray-100 lg:p-8 px-4 py-8 lg:rounded-4xl rounded-xl space-y-4">
-          {[1, 2].map((_, idx) => (
-            <div key={idx} className="bg-gray-300 rounded-2xl p-6 space-y-4">
-              {/* Accordion title bar */}
-              <div className="h-6 w-1/3 bg-gray-200 rounded" />
-
-              {/* Exactly four skeleton lines */}
-              <div className="space-y-2">
-                <div className="h-4 w-3/4 bg-gray-200 rounded" />
-                <div className="h-4 w-2/3 bg-gray-200 rounded" />
-                <div className="h-4 w-1/2 bg-gray-200 rounded" />
-                <div className="h-4 w-5/6 bg-gray-200 rounded" />
-              </div>
-            </div>
-          ))}
-
-        </section>
-      </section>
     </section>
 
     
     </section>
+
   )
 }

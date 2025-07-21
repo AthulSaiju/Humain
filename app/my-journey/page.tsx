@@ -65,7 +65,7 @@ const Profile = async () => {
               className="rounded-full"
             />
             <div className="flex flex-col gap-2">
-              <h1 className="font-bold text-2xl text-amber-50">
+              <h1 className="font-bold lg:text-2xl text-xl text-amber-50">
                 {user.firstName} {user.lastName}
               </h1>
               <p className="text-sm text-muted-foreground">
@@ -86,7 +86,7 @@ const Profile = async () => {
                   {totalSessions}
                 </p>
               </div>
-              <div className=" text-white opacity-50">Lessons completed</div>
+              <div className=" text-white opacity-50 max-sm:text-sm">Lessons completed</div>
             </div>
 
             <div className=" bg-orange-600 rounded-2xl p-3 gap-2 flex flex-col h-fit">
@@ -96,7 +96,7 @@ const Profile = async () => {
                   {humains.length}
                 </p>
               </div>
-              <div className=" text-white opacity-50">Humains created</div>
+              <div className=" text-white opacity-50 max-sm:text-sm">Humains created</div>
             </div>
           </div>
         </section>
@@ -110,11 +110,11 @@ const Profile = async () => {
           >
             <AccordionItem
               value="humains"
-              className="bg-orange-600 px-6  rounded-2xl border-none mb-4"
+              className="bg-orange-600 lg:px-6 lg:py-4 px-4 rounded-2xl border-none mb-4"
             >
               <AccordionTrigger
                 className={cn(
-                  "text-2xl font-bold text-white opacity-80",
+                  "lg:text-2xl text-xl font-bold text-white opacity-80",
                   // target the chevron svg directly:
                   "[&_svg]:w-6 [&_svg]:h-6 [&_svg]:text-black"
                 )}
@@ -128,11 +128,11 @@ const Profile = async () => {
 
             <AccordionItem
               value="recent"
-              className="bg-[#292929] lg:px-6 p-4  rounded-4xl border-none"
+              className="bg-[#292929] lg:px-6 lg:py-4 px-4 rounded-2xl border-none mb-4"
             >
               <AccordionTrigger
                 className={cn(
-                  "text-2xl font-bold text-white opacity-80",
+                  "lg:text-2xl text-xl font-bold text-white opacity-80",
                   // target the chevron svg directly:
                   "[&_svg]:w-6 [&_svg]:h-6 [&_svg]:text-orange-500"
                 )}

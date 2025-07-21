@@ -22,10 +22,10 @@ const HumainSession = async ({ params }: HumainSessionPageProps) => {
 
 
   return (
-    <section className=' w-full min-h-screen bg-white'>
+    <section className=' w-full max-h-screen bg-white'>
     <main>
 
-        <section className='custom-bg p-8 rounded-4xl gap-2 max-sm:-mt-4'>
+        <section className='custom-bg lg:p-8 p-5 rounded-4xl gap-2 mb-4'>
             <article className="flex rounded-2xl justify-between p-6 flex-wrap  bg-[#c2bebd] mb-4">
 
                 <div className="flex items-center gap-2">
@@ -35,7 +35,7 @@ const HumainSession = async ({ params }: HumainSessionPageProps) => {
 
                     <div className="flex flex-col gap-2">
                         <div className="flex items-center gap-2">
-                            <p className="font-bold text-2xl">
+                            <p className="font-bold lg:text-2xl text-lg">
                                 {name}
                             </p>
                             <div className="subject-badge ">

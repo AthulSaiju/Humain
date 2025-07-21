@@ -58,7 +58,7 @@ const HumainsList = ({ title, humains, classNames }: HumainsListProps) => {
                       </div>
                       <div className="flex flex-col gap-2">
                         <div className="flex gap-4 w-full">
-                        <p className="font-bold text-2xl">{name}</p>
+                        <p className="font-bold lg:text-2xl text-lg">{name}</p>
 
 
                         <div className="subject-badge w-fit lg:hidden flex items-center ">
@@ -68,7 +68,7 @@ const HumainsList = ({ title, humains, classNames }: HumainsListProps) => {
                         
 
                         </div>
-                        <p className="text-lg">{topic}</p>
+                        <p className="lg:text-lg text-sm">{topic}</p>
                       </div>
                     </div>
                   </Link>
@@ -80,7 +80,7 @@ const HumainsList = ({ title, humains, classNames }: HumainsListProps) => {
                       height={14}
                       className=""
                     />
-                    <p className="text-lg">
+                    <p className="lg:text-lg text-sm">
                       {duration} <span className="">m</span>
                     </p>
                     

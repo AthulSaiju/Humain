@@ -47,8 +47,8 @@ const SubjectFilter = () => {
   }, [subject, router, searchParams]);
 
   return (
-    <Select onValueChange={setSubject} value={subject}>
-      <SelectTrigger className="input2 capitalize bg-transparent">
+    <Select onValueChange={setSubject} value={subject} >
+      <SelectTrigger className="input2 capitalize bg-white ">
         <SelectValue placeholder="Subject" />
       </SelectTrigger>
       <SelectContent>
