@@ -3,7 +3,32 @@ export default function HumainsIdLoading() {
   return (
 
    <section className=' w-full min-h-screen bg-white max-sm:px-4 flex justify-center items-center '>
-    <section className="lg:w-[73%] w-[90%] lg:p-8  space-y-6 animate-pulse lg:mt-[10vh] mt-[20vh] ">
+    <div className="fixed inset-0 pointer-events-none z-0">
+        {/* vertical lines */}
+        <div
+          className="absolute w-px h-full bg-black opacity-20"
+          style={{ left: "15%" }}
+        />
+        <div
+          className="absolute w-px h-full bg-black opacity-20"
+          style={{ left: "50%" }}
+        />
+        <div
+          className="absolute w-px h-full bg-black opacity-20"
+          style={{ right: "15%" }}
+        />
+
+        {/* horizontal lines */}
+        <div
+          className="absolute h-px w-full bg-black opacity-20"
+          style={{ top: "10%" }}
+        />
+        <div
+          className="absolute h-px w-full bg-black opacity-20"
+          style={{ top: "80%" }}
+        />
+      </div>
+    <section className="lg:w-[73%] w-[90%] lg:p-8  space-y-6 animate-pulse lg:mt-[10vh] mt-[15vh] ">
       {/* Header Card */}
       <article className="flex rounded-2xl lg:justify-between  max-sm:h-[200px] p-6 flex-wrap bg-gray-200 mb-4 max-sm:flex-col">
         <div className="flex max-sm:h-1/3 max-sm:mb-2 items-center gap-4 bg-gray-200">

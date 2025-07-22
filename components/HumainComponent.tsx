@@ -214,7 +214,7 @@ const HumainComponent = ({
 
             {/* -------------------------------Transcript Section------------------------------------ */}
 
-          <section className="transcript lg:rounded-2xl rounded-lg bg-[#1c1c1c] h-81 lg:h-full p-4 overflow-hidden">
+          <section className="transcript lg:rounded-2xl rounded-lg bg-[#1c1c1c] h-65 lg:h-full p-4 overflow-hidden">
             <div className="transcript-message no-scrollbar overflow-y-auto">
               {messages.map((message, index) => {
                 if (message.role === "assistant") {

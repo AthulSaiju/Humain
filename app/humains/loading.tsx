@@ -1,7 +1,7 @@
 // app/humains/loading.tsx
 export default function HumainsLoading() {
   return (
-     <section className="relative w-full min-h-screen bg-white p-4">
+      <section className="relative w-full min-h-screen bg-white p-4">
      {/* Decorative grid lines (optional) */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute w-px h-full bg-black opacity-20" style={{ left: "15%" }} />
@@ -17,12 +17,17 @@ export default function HumainsLoading() {
           {/* Title skeleton */} 
           <div className="h-8 lg:w-1/3 w-2/3 bg-gray-300 rounded " />
           {/* Filters skeleton */}
-          <div className="flex gap-4 items-center flex-wrap">
-            <div className="h-10 w-40 bg-gray-200 rounded " />
-            <div className="h-10 w-40 bg-gray-200 rounded " />
-            <div className='max-sm:w-full flex justify-center'>
-            <div className="h-10 w-32 bg-gray-200 rounded-full" />
+          <div className="flex gap-4 items-center max-sm:flex-col">
+
+            <div className='flex gap-3 max-sm:justify-center '>
+            <div className="h-10 lg:w-50 w-35 bg-gray-200 rounded " />
+            <div className="h-10 lg:w-40 w-35 bg-gray-200 rounded " />
             </div>
+
+            <div className='max-sm:w-full flex justify-center'>
+            <div className="h-10 w-42 bg-gray-200 rounded-full" />
+            </div>
+
           </div>
         </div>
 

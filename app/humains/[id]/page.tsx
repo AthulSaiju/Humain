@@ -23,9 +23,34 @@ const HumainSession = async ({ params }: HumainSessionPageProps) => {
 
   return (
     <section className=' w-full max-h-screen bg-white'>
+        <div className="fixed inset-0 pointer-events-none z-0">
+        {/* vertical lines */}
+        <div
+          className="absolute w-px h-full bg-black opacity-20"
+          style={{ left: "15%" }}
+        />
+        <div
+          className="absolute w-px h-full bg-black opacity-20"
+          style={{ left: "50%" }}
+        />
+        <div
+          className="absolute w-px h-full bg-black opacity-20"
+          style={{ right: "15%" }}
+        />
+
+        {/* horizontal lines */}
+        <div
+          className="absolute h-px w-full bg-black opacity-20"
+          style={{ top: "10%" }}
+        />
+        <div
+          className="absolute h-px w-full bg-black opacity-20"
+          style={{ top: "80%" }}
+        />
+      </div>
     <main>
 
-        <section className='custom-bg lg:p-8 p-5 rounded-4xl gap-2 mb-1'>
+        <section className='custom-bg lg:p-8 p-5 rounded-4xl gap-2 mb-1 z-10'>
             <article className="flex rounded-2xl justify-between p-6 flex-wrap  bg-[#c2bebd] mb-4">
 
                 <div className="flex items-center gap-2">
