@@ -45,7 +45,7 @@ const HumainsLibrary = async ({ searchParams }: SearchParams) => {
       <main className="">
         <section className="flex items-center justify-between gap-4 max-sm:flex-col">
           <h1>Featured Humains</h1>
-          <div className="flex lg:max-w-2/3 gap-4 items-center">
+          <div className="flex lg:max-w-2/3 gap-4 items-center z-10">
             <SearchInput />
             <SubjectFilter />
 

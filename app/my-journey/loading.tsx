@@ -4,7 +4,7 @@ import React from 'react';
 
 export default function JourneyLoading() {
   return (
-<section className=' w-full min-h-screen bg-white  flex justify-center items-center '>
+ <section className=' w-full min-h-screen bg-white  flex justify-center items-center '>
 
      <div className="fixed inset-0 pointer-events-none z-0">
         {/* vertical lines */}
@@ -42,22 +42,22 @@ export default function JourneyLoading() {
         <section className="flex justify-between gap-4 max-sm:flex-col lg:p-2 lg:px-4 py-6 items-center bg-gray-200 rounded-xl">
           <div className="flex items-center gap-4">
             {/* Avatar */}
-            <div className="h-28 w-28 bg-gray-300 rounded-full" />
+            <div className="lg:h-28 lg:w-28 h-22 w-22 bg-gray-300 rounded-full" />
             <div className="space-y-2">
-              <div className="h-6 w-40 bg-gray-300 rounded" />
-              <div className="h-4 w-56 bg-gray-300 rounded" />
+              <div className="h-6 lg:w-40 w-36 bg-gray-300 rounded" />
+              <div className="h-4 lg:w-56 w-42 bg-gray-300 rounded" />
             </div>
           </div>
 
           {/* Stats cards */}
           <div className="flex gap-4 items-center">
             <div className="bg-gray-100 rounded-2xl p-4 flex flex-col gap-2">
-              <div className="h-6 w-24 bg-gray-300 rounded" />
-              <div className="h-4 w-32 bg-gray-300 rounded" />
+              <div className="h-6 lg:w-24 w-18 bg-gray-300 rounded" />
+              <div className="h-4 lg:w-32 w-26 bg-gray-300 rounded" />
             </div>
             <div className="bg-gray-300 rounded-2xl p-4 flex flex-col gap-2">
-              <div className="h-6 w-24 bg-gray-100 rounded" />
-              <div className="h-4 w-32 bg-gray-100 rounded" />
+              <div className="h-6 lg:w-24 w-18 bg-gray-100 rounded" />
+              <div className="h-4 lg:w-32 w-26 bg-gray-100 rounded" />
             </div>
           </div>
         </section>

@@ -38,7 +38,7 @@ const SearchInput = () => {
     }, [searchQuery, router, searchParams, pathname]);
 
     return (
-        <div className="relative border border-black rounded-lg items-center flex gap-2 px-2 py-1 h-fit max-sm:max-w-[170px]  max-sm:text-sm">
+        <div className="relative border border-black rounded-lg items-center bg-white flex gap-2 px-2 py-1 h-fit max-sm:max-w-[170px]  max-sm:text-sm">
             <Image src="/icons/search.svg" alt="search" width={15} height={15} />
             <input
                 placeholder="Search humains..."

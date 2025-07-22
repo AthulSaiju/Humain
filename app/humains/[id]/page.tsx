@@ -25,7 +25,7 @@ const HumainSession = async ({ params }: HumainSessionPageProps) => {
     <section className=' w-full max-h-screen bg-white'>
     <main>
 
-        <section className='custom-bg lg:p-8 p-5 rounded-4xl gap-2 mb-4'>
+        <section className='custom-bg lg:p-8 p-5 rounded-4xl gap-2 mb-1'>
             <article className="flex rounded-2xl justify-between p-6 flex-wrap  bg-[#c2bebd] mb-4">
 
                 <div className="flex items-center gap-2">

@@ -37,8 +37,8 @@ const LiveClock: React.FC = () => {
   // })
 
   return (
-    <div className="flex flex-col w-fit items-start">
-      <span className="lg:text-lg  lg:w-[132px] w-[97px] text-sm  opacity-50 lg:mb-3 mb-4"> {timePart}</span>
+    <div className="flex flex-col w-fit items-start h-fit">
+      <span className="lg:text-lg   text-sm   "> {timePart}</span>
       {/* <span className="text-sm text-gray-600">{dateString}</span> */}
     </div>
   )
