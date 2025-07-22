@@ -83,17 +83,28 @@ const HumainComponent = ({
   };
 
   const handleCall = async () => {
-  // 1️⃣ Force permission prompt
-  try {
-    await navigator.mediaDevices.getUserMedia({ audio: true });
-  } catch (err) {
-    console.error("Mic permission denied or unavailable:", err);
-    alert("Please allow microphone access to use voice chat.");
-    return;
+  // 1️⃣ Trigger mic‑permission prompt on click
+  if (navigator.mediaDevices?.getUserMedia) {
+    try {
+      // no need to store the result—just await to prompt
+      await navigator.mediaDevices.getUserMedia({ audio: true });
+    } catch (err: unknown) {
+      if (
+        err instanceof DOMException &&
+        (err.name === "NotAllowedError" || err.name === "PermissionDeniedError")
+      ) {
+        alert("Please allow microphone access to use voice chat.");
+        return;
+      }
+      console.warn("getUserMedia failed or unsupported, falling back:", err);
+    }
+  } else {
+    console.warn("getUserMedia not available on this browser");
   }
 
-  // 2️⃣ Proceed with vapi.start
+  // 2️⃣ Proceed with your existing VAPI startup
   setCallStatus(CallStatus.CONNECTING);
+
   const assistantOverrides = {
     variableValues: { subject, topic, style },
     clientMessages: ["transcript"],
@@ -101,16 +112,13 @@ const HumainComponent = ({
   };
 
   try {
-    // @ts-expect-error: vapi.start is untyped here
+    // @ts-expect-error: vapi.start handles its own audio capture if needed
     vapi.start(configureAssistant(voice, style), assistantOverrides);
-  } catch (err) {
-    // err is unknown by default—narrow it to Error if possible
-    let message = "Could not start audio session.";
-    if (err instanceof Error && err.message) {
-      message = err.message;
-    }
+  } catch (err: unknown) {
     console.error("Failed to start VAPI session:", err);
     setCallStatus(CallStatus.FINISHED);
+    const message =
+      err instanceof Error ? err.message : "Could not start audio session.";
     alert(message);
   }
 };
