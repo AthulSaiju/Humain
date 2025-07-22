@@ -83,17 +83,38 @@ const HumainComponent = ({
   };
 
   const handleCall = async () => {
-    setCallStatus(CallStatus.CONNECTING);
+  // 1️⃣ Force permission prompt
+  try {
+    await navigator.mediaDevices.getUserMedia({ audio: true });
+  } catch (err) {
+    console.error("Mic permission denied or unavailable:", err);
+    alert("Please allow microphone access to use voice chat.");
+    return;
+  }
 
-    const assistantOverrides = {
-      variableValues: { subject, topic, style },
-      clientMessages: ["transcript"],
-      serverMessages: [],
-    };
-
-    //  @ts-expect-error asd
-    vapi.start(configureAssistant(voice, style), assistantOverrides);
+  // 2️⃣ Proceed with vapi.start
+  setCallStatus(CallStatus.CONNECTING);
+  const assistantOverrides = {
+    variableValues: { subject, topic, style },
+    clientMessages: ["transcript"],
+    serverMessages: [],
   };
+
+  try {
+    // @ts-expect-error: vapi.start is untyped here
+    vapi.start(configureAssistant(voice, style), assistantOverrides);
+  } catch (err) {
+    // err is unknown by default—narrow it to Error if possible
+    let message = "Could not start audio session.";
+    if (err instanceof Error && err.message) {
+      message = err.message;
+    }
+    console.error("Failed to start VAPI session:", err);
+    setCallStatus(CallStatus.FINISHED);
+    alert(message);
+  }
+};
+
 
   const handleDisconnect = () => {
     setCallStatus(CallStatus.FINISHED);
